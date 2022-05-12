@@ -1,10 +1,17 @@
-import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './containers/Header';
+import ProductDetail from './containers/ProductDetail';
+import ProductListing from './containers/ProductListing';
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <h1>Home</h1>
+        <Header />
+        <Routes>
+          <Route path='/' element={<ProductListing />} />
+          <Route path='/product/:productId' element={<ProductDetail />} />
+          <Route>404 not Found!</Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );
