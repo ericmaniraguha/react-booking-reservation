@@ -1,9 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const ProductComponent = () => {
+  const products = useSelector((state) => state.allProducts.products);
+
+  const { id, title } = products[0];
   return (
-    <div>
-      <h1>Product Component</h1>
+    <div className='four wide column' key={id}>
+      <div className='ui link cards'>
+        <div className='card'>
+          <div className='image'></div>
+          <div className='content'>
+            <div className='header'>{title}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
