@@ -1,15 +1,15 @@
-impory {ActionTypes} from '../constants/action-types.js'
+import { ActionTypes } from '../constants/action-types.js';
 
-export const setProducts = (products) =>{
+export const setProducts = (products) => {
   return {
-    type:SET_PRODUCTS,
-    payload: products
-  }
-}
+    type: ActionTypes.SET_PRODUCTS,
+    payload: products,
+  };
+};
 
-export const selectedProduct = (product) =>{
+export const selectedProduct = (product) => {
   return {
-    type:SET_PRODUCTS,
-    payload: product
-  }
-}
+    type: ActionTypes.SET_PRODUCTS,
+    payload: product,
+  };
+};
